@@ -1,17 +1,16 @@
 const generatePage = data => {
     return `
-    #README
     # ${data.title}
-    ## License:
-    [![license](https://img.shields.io/badge/license-$(data.license)-blue.svg)](https.)
+
+    ![license](https://img.shields.io/badge/license-${data.license}-blue.svg)
 
     ## Table of Contents
-    - [Description](#description)
-    - [Installation](#installation)
-    - [Usage](#usage)
-    - [Contribution](#contribution)
-    - [Testing](#testing)
-    - [More Information](#more-information)
+    * [Description](#description)
+    * [Installation](#installation)
+    * [Usage](#usage)
+    * [Contribution](#contribution)
+    * [Testing](#testing)
+    * [Questions](#questions)
 
     ## Description:
     ${data.description}
@@ -28,12 +27,13 @@ const generatePage = data => {
     ## Testing
     ${data.test}
 
-    ## More Information
-    ${data.email}
-    ${data.github}
+    ## Questions
+    If a user has questions regarding ${data.title}, 
+    please send an email to ${data.email}.
+    I can also be reached on my GitHub:
+    https://github.com/${data.github}
 
-
-    `
+    `;
 }
 
 

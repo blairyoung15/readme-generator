@@ -6,7 +6,7 @@ console.log(inquirer)
 
 console.log(`
 =====================
-Create a ReadMe file
+Create a README file
 =====================
 
 Please answer the following
@@ -95,10 +95,10 @@ const promptUser = () => {
         }
       },
       {
-        type: 'checkbox',
+        type: 'list',
         name: 'license',
-        message: 'Which license applies to your project? (Check all that apply)',
-        choices: ['JavaScript', 'HTML', 'CSS', 'ES6', 'jQuery', 'Bootstrap', 'Node']
+        message: 'Which license applies to your project?',
+        choices: ['MIT', 'GNU']
       },
       {
         type: 'input',

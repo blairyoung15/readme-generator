@@ -2,6 +2,8 @@ const fs = require('fs');
 const inquirer = require('inquirer');
 const generatePage = require('./src/readme-template');
 
+console.log(inquirer)
+
 console.log(`
 =====================
 Create a ReadMe file
@@ -128,17 +130,22 @@ const promptUser = () => {
      
     ]);
   };
-  
+
   promptUser()
-  .then(promptProject)
-  .then(portfolioData => {
-    const pageHTML = generatePage(portfolioData);
-
-    fs.writeFile('./index.html', pageHTML, err => {
-      if (err) throw new Error(err);
-
-      console.log('Page created! Check out index.html in this directory to see it!');
-    });
-  });
-
+    .then(answers => {
+        return generatePage(answers);
+    })
+    .then(data => {
+        return fs.writeFile('README.md', data, err => {
+            if (err) {
+                console.log(err);
+                return;
+            } else {
+                console.log('Your README has been successfully created!')
+            }
+        });
+    })
+    .catch(err => {
+        console.log(err)
+    })
   

@@ -1,7 +1,6 @@
-const generatePage = data => {
-    return `
+
     #README
-    # ${data.title}
+    # title
     ## License:
     [![license](https://img.shields.io/badge/license-$(data.license)-blue.svg)](https.)
 
@@ -14,27 +13,23 @@ const generatePage = data => {
     - [More Information](#more-information)
 
     ## Description:
-    ${data.description}
+    thsissss
 
     ## Installation:
-    ${data.installation}
+    jfdkals
 
     ## Usage:
-    ${data.usage}
+    fjdklaflsa
 
     ## Contribution 
-    ${data.contribution}
+    fjdkafla
 
     ## Testing
-    ${data.test}
+    undefined
 
     ## More Information
-    ${data.email}
-    ${data.github}
+    kfdka
+    fkdalfjda
 
 
-    `
-}
-
-
-module.exports = generatePage;
+    
